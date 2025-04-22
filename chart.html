@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here be charts</title>
+</head>
+
+<body>
+    <div class="layout">
+        <nav>
+            <a href="/index.html"><img class="img-emoji" src="/emoji/2754.svg">About</a>
+            <a href="/carpage.html"><img class="img-emoji" src="/emoji/1f63b.svg">The cat page</a>
+            <a href="/chart.html"><img class="img-emoji" src="/emoji/1f4ca.svg">Cool data</a>
+            <a href="/contact.html"><img class="img-emoji" src="/emoji/260e.svg">Contact</a>
+        </nav>
+        <div>
+            <h1>macOS version distribution</h1>
+            <img class="img-chart" id="latest-image" alt="Latest Chart">
+            <script>
+                // Function to get the latest file based on its timestamp in the filename
+                async function fetchLatestFile() {
+            try {
+                // Fetch the latest file from the server
+                const response = await fetch('get_latest_file.php');
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                        }
+                        const latestFile = await response.text();
+        
+                        // Set the src of the image to the latest file
+                        document.getElementById('latest-image').src = latestFile;
+                        document.getElementById('latest-image').alt = `Loaded ${latestFile}`;
+                                } catch (error) {
+                        console.error('Error fetching the latest file:', error);
+                        document.getElementById('latest-image').alt = "Error loading the image.";
+                        }
+                }
+        
+                // Call the function on page load
+                fetchLatestFile();
+            </script>
+        </div>
+    </div>
+</body>
+</html>
