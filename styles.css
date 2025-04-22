@@ -109,6 +109,15 @@ h2 { /* Scales between 1.5rem and 3rem */
     margin-bottom: 10px;
 }
 
+.subheading-hint {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #bbb;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
 /* Default link styling */
 a {
     color: #3498db; /* Change text color */
@@ -148,7 +157,7 @@ a:hover {
     height: auto;
     border-radius: 5px;
     cursor: zoom-in;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.6s ease, box-shadow 0.3s ease;
     display: block;
     margin: 0 auto;     /* Center the image inside its container */
 }
