@@ -9,7 +9,6 @@ body {
     margin: 0;
     padding: 20px;
 }
-
 header {
     display: flex;
     flex-direction: column;
@@ -21,12 +20,12 @@ header {
 }
 
 /* Navigation Styling */
-
 .layout {
     display: flex;
     flex-direction: row;
     min-height: 100vh; /* let the content define height if needed */
 }
+
 /* Sidebar navigation */
 nav {
     display: flex;
@@ -67,7 +66,6 @@ nav a:hover {
 /* ########################################################### */
 /*     text                                                    */
 /* ########################################################### */
-
 h1 {
     font-size: 2rem;
     padding: 10px 20px;
@@ -111,7 +109,6 @@ h2 { /* Scales between 1.5rem and 3rem */
     margin-bottom: 10px;
 }
 
-
 /* Default link styling */
 a {
     color: #3498db; /* Change text color */
@@ -136,12 +133,6 @@ a:hover {
     align-items: right;
 }
 
-.img-menuemoji {
-    max-width: 30px;
-    max-height: 30px;
-    padding-top: 10px;
-}
-
 /* Image Styling, chart*/
 .img-chart {
     max-width: 90%;
@@ -156,7 +147,7 @@ a:hover {
     margin: 0 auto;
 }
 .img-car:hover {
-    content: url('Uncannyclose.webp'); /* Change the image on hover */
+    content: url('/imgs/Uncannyclose.webp'); /* Change the image on hover */
 }
 
 /* Button Styling */
