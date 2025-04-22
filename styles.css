@@ -72,7 +72,7 @@ h1 {
     color: #ECECEC; /* Light text for title */
 }
 h2 { /* Scales between 1.5rem and 3rem */
-    font-size: clamp(1rem, 2vmax, 2rem); 
+    font-size: 1.5rem; 
     color: #ECECEC;
     text-align: left;
     margin-left: 15%;
