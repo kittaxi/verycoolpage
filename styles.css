@@ -248,3 +248,43 @@ button {
 .contact-list a:hover {
     color: #da8fff;
 }
+
+@media (max-width: 768px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    nav a {
+        flex-direction: column;
+        width: 40vw;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .main-content {
+        padding: 20px;
+        max-width: 100%;
+    }
+
+    .text-box,
+    .chart-box {
+        margin-left: 5%;
+        margin-right: 5%;
+        padding: 10px;
+    }
+
+    .img-chart {
+        max-width: 100%;
+        height: auto;
+    }
+}
