@@ -133,14 +133,6 @@ a:hover {
     align-items: right;
 }
 
-/* Image Styling, chart*/
-.img-chart {
-    max-width: 90%;
-    max-height: 80vh;
-    margin: 0 auto;
-}
-
-/* Image Styling, car*/
 .img-car {
     max-width: 50%;
     max-height: 40vh;
@@ -150,21 +142,32 @@ a:hover {
     content: url('/imgs/Uncannyclose.webp'); /* Change the image on hover */
 }
 
-/* Button Styling */
-button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1rem;
-    margin: 20px 0;
-    cursor: pointer;
+.img-chart {
+    width: 100%;
+    max-width: 600px;   /* Smaller max width for better default size */
+    height: auto;
     border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+    cursor: zoom-in;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+    margin: 0 auto;     /* Center the image inside its container */
 }
+
+.img-chart.zoomed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    max-width: 95vw;
+    max-height: 95vh;
+    width: auto;
+    z-index: 9999;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    border-radius: 12px;
+    cursor: zoom-out;
+    background-color: #212121;
+}
+
 
 .text-box {
     display: flex;
@@ -193,13 +196,12 @@ button {
     box-sizing: border-box;
 }
 
-
 .chart-box {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #333;
-    padding: 20px;
+    padding: 10px;
     border-radius: 15px;
     margin: 30px auto;
     max-width: 1000px;
@@ -209,17 +211,8 @@ button {
 }
 
 .chart-box-inner {
-    background-color: #1e1e1e;
-    padding: 10px;
+    padding: 5px;
     border-radius: 10px;
-    box-shadow: inset 0 0 6px rgba(255, 255, 255, 0.05);
-}
-
-.img-chart {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
-    border-radius: 5px;
 }
 
 .main-content {
@@ -272,7 +265,7 @@ button {
     }
 
     .main-content {
-        padding: 20px;
+        padding: 10px;
         max-width: 100%;
     }
 
@@ -285,6 +278,7 @@ button {
 
     .img-chart {
         max-width: 100%;
+        max-height: 100%;
         height: auto;
     }
 }

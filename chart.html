@@ -7,6 +7,12 @@
     <title>Here be charts</title>
 </head>
 
+<script>
+    function toggleZoom(img) {
+        img.classList.toggle('zoomed');
+    }
+    </script>
+
 <body>
     <div class="layout">
         <nav>
@@ -21,7 +27,7 @@
 
             <div class="chart-box">
                 <div class="chart-box-inner">
-                    <img class="img-chart" id="latest-image" alt="Latest Chart">
+                    <img class="img-chart" id="latest-image" alt="Latest Chart" onclick="toggleZoom(this)">
                 </div>
             </div>
 
