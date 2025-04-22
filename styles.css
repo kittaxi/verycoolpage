@@ -2,7 +2,7 @@
 /*     general elements                                        */
 /* ########################################################### */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, sans-serif;
     background-color: #212121; /* Dark background */
     color: #ECECEC; /* Light text */
     text-align: center;
@@ -78,29 +78,29 @@ h2 { /* Scales between 1.5rem and 3rem */
     margin-left: 15%;
 }
 .subheading-abovebox { /* Scales between 1.5rem and 3rem */
-    font-size: clamp(1rem, 1.5vmax, 2rem); 
+    font-size: 1.3rem; 
     color: #ECECEC;
     text-align: left;
     padding: 10px;
     margin-left: 15%;
 }
-.subheading-inbox { /* Scales between 1.5rem and 3rem */
-    font-size: clamp(1rem, 2vmax, 1.6rem); 
+.subheading-inbox {
+    font-size: 1.3rem;
     color: #ECECEC;
     text-align: left;
-    padding: 0px 5px;
+    padding: 0 5px;
     font-style: italic;
 }
-.p1 { 
-    font-size: clamp(0.5rem, 1vmax, 1.1rem); 
+.p1 {
+    font-size: 1rem;
     color: #ECECEC;
     text-align: left;
     margin-left: 1%;
     margin-right: 2%;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 .p1-explains { 
-    font-size: clamp(0.5rem, 1vmax, 1.1rem); 
+    font-size: 1rem; 
     color: #ECECEC;
     text-align: left;
     margin-left: 1%;
