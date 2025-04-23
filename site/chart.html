@@ -35,7 +35,7 @@
             <script>
                 async function fetchLatestFile() {
                     try {
-                        const response = await fetch('get_latest_file.php');
+                        const response = await fetch('/scripts/get_latest_file.php');
                         if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
                         const latestFile = await response.text();
                         const img = document.getElementById('latest-image');

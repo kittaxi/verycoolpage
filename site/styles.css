@@ -7,7 +7,7 @@ body {
     color: #ECECEC; /* Light text */
     text-align: center;
     margin: 0;
-    padding: 20px;
+    padding: 0;
 }
 header {
     display: flex;
@@ -28,14 +28,17 @@ header {
 
 /* Sidebar navigation */
 nav {
+    position: sticky;
+    top: 20px; /* distance from the top of the screen */
+    align-self: flex-start;
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    width: fit-content; /* Shrinks to fit contents */
     background-color: #1e1e1e;
     color: white;
     box-sizing: border-box;
+    height: fit-content; /* don’t stretch vertically */
 }
 
 /* Navigation links styled as buttons */
@@ -89,7 +92,7 @@ h2 { /* Scales between 1.5rem and 3rem */
     color: #ECECEC;
     text-align: left;
     padding: 0 5px;
-    font-style: italic;
+    font-style: bold;
 }
 .p1 {
     font-size: 1rem;
@@ -157,7 +160,7 @@ a:hover {
     height: auto;
     border-radius: 5px;
     cursor: zoom-in;
-    transition: transform 0.6s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s ease, box-shadow 0.3s ease;
     display: block;
     margin: 0 auto;     /* Center the image inside its container */
 }
@@ -182,7 +185,7 @@ a:hover {
     display: flex;
     justify-content: space-between; /* Adjusts spacing automatically */
     padding: 8px;
-    border-radius: 10px; /* Add rounded corners */
+    border-radius: 15px; /* Add rounded corners */
     background-color: #333; /* Optional background for the container */
     color: white;
     max-width: 1000px;
@@ -199,14 +202,26 @@ a:hover {
     background-color: #3d3d3d;
     color: #ECECEC;
     text-align: justify;
-    border-radius: 10px;
+    border-radius: 15px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     margin: 0 1%;
     box-sizing: border-box;
 }
 
+.box-divider {
+    border: none;
+    height: 2px;
+    background-color: #aaa;
+    margin: 20px 0;
+    border-radius: 4px;
+    opacity: 0.4;
+}
+
 .chart-box {
     display: flex;
+    flex-grow: 1; /* Allow the item to grow within the container */
+    flex-basis: 600px; /* Set a consistent base width */
+    max-width: 1000px; /* Optional: Limit the maximum size */
     justify-content: center;
     align-items: center;
     background-color: #333;

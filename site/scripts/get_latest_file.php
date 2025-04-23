@@ -18,7 +18,7 @@ usort($matchingFiles, function ($a, $b) {
 
 // Return the latest file
 if (!empty($matchingFiles)) {
-    echo $matchingFiles[0];
+    echo "scripts/" . $matchingFiles[0];
 } else {
     http_response_code(404);
     echo "No files found!";
