@@ -268,7 +268,7 @@ a:hover {
     color: #da8fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .layout {
         flex-direction: column;
     }
