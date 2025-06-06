@@ -1,46 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Welcomington</title>
-    <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <title>Welcomington</title>
+  <link rel="stylesheet" href="styles.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-    <div class="layout">
-        <nav>
-            <a href="/index"><img class="img-emoji" src="/emoji/2754.svg">About</a>
-            <a href="/carpage"><img class="img-emoji" src="/emoji/1f63b.svg">The cat page</a>
-            <a href="/chart"><img class="img-emoji" src="/emoji/1f4ca.svg">Cool data</a>
-            <a href="/contact"><img class="img-emoji" src="/emoji/260e.svg">Contact</a>
-        </nav>
+  <div class="layout-social">
+    <nav>
+      <a href="/index"><img class="img-emoji" src="/emoji/2754.svg">About</a>
+      <a href="/carpage"><img class="img-emoji" src="/emoji/1f63b.svg">The cat page</a>
+      <a href="/chart"><img class="img-emoji" src="/emoji/1f4ca.svg">Cool data</a>
+      <a href="/contact"><img class="img-emoji" src="/emoji/260e.svg">Contact</a>
+    </nav>
 
-        <!-- Main content -->
-        <main class="main-content">
-            <h1>My socials etc.</h1>
+    <main class="main-content">
+      <h1>My socials, etc.</h1>
 
-            <ul class="contact-list">
-                <li>
-                    <a href="https://fi.linkedin.com/in/joni-kaivola-81b627175" target="_blank" rel="noopener">
-                        LinkedIn
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/_kittaxi/" target="_blank" rel="noopener">
-                        Instagram
-                    </a>
-                </li>
-                <li>
-                    <a href="https://github.com/kittaxi" target="_blank" rel="noopener">
-                        GitHub
-                    </a>
-                </li>
-                <li>
-                    Discord identifier: kittax
-                </li>
-            </ul>
-        </main>
-    </div>
+      <div class="social-card-grid">
+
+        <a href="https://www.linkedin.com/in/joni-kaivola-81b627175/" class="card-link" target="_blank">
+          <div class="card">
+            <div class="card-top">
+              <div class="icon-circle">
+                <img class="img-emoji-contact" src="emoji/1f517.svg" alt="LinkedIn">
+              </div>
+              <div class="card-label-wrapper">
+                <span class="card-label">LinkedIn</span>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <p class="p1">Not super active on here, but let's connect!</p>
+            </div>
+          </div>
+        </a>
+      
+        <a href="https://www.instagram.com/_kittaxi/" class="card-link" target="_blank">
+          <div class="card">
+            <div class="card-top">
+              <div class="icon-circle">
+                <img class="img-emoji-contact" src="emoji/1f4f8.svg" alt="LinkedIn">
+              </div>
+              <div class="card-label-wrapper">
+                <span class="card-label">Instagram</span>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <p class="p1">DM me funny reel or look at my cat pictures!</p>
+            </div>
+          </div>
+        </a>
+    
+        <a href="https://github.com/kittaxi" class="card-link" target="_blank">
+          <div class="card">
+            <div class="card-top">
+              <div class="icon-circle">
+                <img class="img-emoji-contact" src="emoji/1f4bb.svg" alt="LinkedIn">
+              </div>
+              <div class="card-label-wrapper">
+                <span class="card-label">GitHub</span>
+              </div>
+            </div>
+            <div class="card-bottom">
+              <p class="p1">My (public) coding stuff!</p>
+            </div>
+          </div>
+        </a>
+      
+        <div class="card">
+          <div class="card-top">
+            <div class="icon-circle">
+              <img class="img-emoji-contact" src="emoji/1f4ac.svg" alt="Discord">
+            </div>
+            <div class="card-label-wrapper">
+              <span class="card-label-discord">
+                Discord: <code class="discord-id">kittax</code>
+              </span>
+            </div>
+          </div>
+          <div class="card-bottom">
+            <p class="p1">I respond to (legitimate) DMs pretty quickly :)</p>
+          </div>
+        </div>
+        
+
+      </div>
+
+    </main>
+  </div>
 </body>
 </html>

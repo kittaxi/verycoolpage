@@ -1,312 +1,386 @@
-/* ########################################################### */
-/*     general elements                                        */
-/* ########################################################### */
+/* ############################## */
+/*       General Layout          */
+/* ############################## */
+
 body {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: #212121; /* Dark background */
-    color: #ECECEC; /* Light text */
-    text-align: center;
-    margin: 0;
-    padding: 0;
+font-family: 'Segoe UI', Roboto, sans-serif;
+background-color: #212121;
+color: #ECECEC;
+text-align: center;
+margin: 0;
+padding: 0;
 }
+
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center the nav links */
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #333; /* Slightly darker than body */
-    color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 10px 20px;
+background-color: #333;
+color: white;
 }
 
-/* Navigation Styling */
 .layout {
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh; /* let the content define height if needed */
+display: flex;
+flex-direction: row;
+min-height: 90vh;
 }
 
-/* Sidebar navigation */
 nav {
-    position: sticky;
-    top: 20px; /* distance from the top of the screen */
-    align-self: flex-start;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    background-color: #1e1e1e;
-    color: white;
-    box-sizing: border-box;
-    height: fit-content; /* don’t stretch vertically */
+position: sticky;
+top: 20px;
+align-self: flex-start;
+display: flex;
+flex-direction: column;
+gap: 20px;
+padding: 20px;
+background-color: #1e1e1e;
+color: white;
+height: fit-content;
 }
 
-/* Navigation links styled as buttons */
 nav a {
-    display: flex;
-    flex-direction: column; /* stack icon and text */
-    align-items: center;
-    justify-content: center;
-    padding: 24px 16px; /* more vertical padding */
-    background-color: #424242;
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    border-radius: 10px;
-    transition: background-color 0.3s, transform 0.2s;
-    width: 130px;
-    height: 130px;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    text-align: center;
-    gap: 10px; /* space between icon and label */
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 24px 16px;
+background-color: #424242;
+color: white;
+text-decoration: none;
+font-size: 1rem;
+border-radius: 10px;
+transition: background-color 0.3s, transform 0.2s;
+width: 130px;
+height: 130px;
+text-align: center;
+gap: 10px;
+box-sizing: border-box;
 }
 
-/* Hover Effect for Navigation Buttons */
 nav a:hover {
-    background-color: #616161; /* Lighter shade for hover */
-    transform: scale(1.1); /* Slight grow effect */
+background-color: #616161;
+transform: scale(1.1);
 }
 
-/* ########################################################### */
-/*     text                                                    */
-/* ########################################################### */
+/* ############################## */
+/*         Fonts & stuff          */
+/* ############################## */
+
 h1 {
-    font-size: 2rem;
-    padding: 10px 20px;
-    color: #ECECEC; /* Light text for title */
+font-size: 2rem;
+padding: 10px 20px;
+color: #ECECEC;
 }
-h2 { /* Scales between 1.5rem and 3rem */
-    font-size: 1.5rem; 
-    color: #ECECEC;
-    text-align: left;
-    margin-left: 15%;
+
+h2, .subheading-abovebox, .subheading-inbox {
+color: #ECECEC;
+text-align: left;
 }
-.subheading-abovebox { /* Scales between 1.5rem and 3rem */
-    font-size: 1.3rem; 
-    color: #ECECEC;
-    text-align: left;
-    padding: 10px;
-    margin-left: 15%;
+
+h2 {
+font-size: 1.5rem;
+margin-left: 15%;
 }
+
+.subheading-abovebox {
+font-size: 1.3rem;
+padding: 10px;
+margin-left: 15%;
+}
+
 .subheading-inbox {
-    font-size: 1.3rem;
-    color: #ECECEC;
-    text-align: left;
-    padding: 0 5px;
-    font-style: bold;
+font-size: 1.3rem;
+padding: 0 5px;
+font-weight: bold;
 }
+
 .p1 {
-    font-size: 1rem;
-    color: #ECECEC;
-    text-align: left;
-    margin-left: 1%;
-    margin-right: 2%;
-    line-height: 1.5;
-}
-.p1-explains { 
-    font-size: 1rem; 
-    color: #ECECEC;
-    text-align: left;
-    margin-left: 1%;
-    margin-right: 2%;
-    line-height: 1.2;
-    margin-bottom: 10px;
+font-size: 1.2rem;
+color: #ECECEC;
+text-align: left;
+margin-left: 1%;
+margin-right: 2%;
+line-height: 1.8rem;
+font-weight: normal;
 }
 
 .subheading-hint {
-    font-size: 0.9rem;
-    font-style: italic;
-    color: #bbb;
-    margin-top: -10px;
-    margin-bottom: 20px;
-    text-align: center;
+font-size: 0.9rem;
+font-style: italic;
+color: #bbb;
+margin-top: -10px;
+margin-bottom: 20px;
+text-align: center;
 }
 
-/* Default link styling */
 a {
-    color: #3498db; /* Change text color */
-    text-decoration: none; /* Remove underline */
-    font-weight: bold; /* Make the text bold */
-    transition: color 0.3s; /* Smooth transition for hover effects */
+color: #3498db;
+text-decoration: none;
+font-weight: bold;
+transition: color 0.3s;
 }
 
-/* Styling for hovered links */
 a:hover {
-    color: #da8fff; /* Change color when hovered */
+color: #da8fff;
 }
 
-/* ########################################################### */
-/*     images                                                  */
-/* ########################################################### */
+/* ############################## */
+/*            Images             */
+/* ############################## */
 
 .img-emoji {
-    max-width: 35;
-    max-height: 35px;
-    vertical-align: middle;
-    align-items: right;
+max-width: 35px;
+max-height: 35px;
+vertical-align: middle;
+}
+
+.img-emoji-contact {
+width: 45px;
+height: 45px;
+object-fit: cover;
+aspect-ratio: 1 / 1;
+filter: drop-shadow(1px 0 rgba(0, 0, 0, 0.4))
+drop-shadow(-1px 0 rgba(0, 0, 0, 0.4))
+drop-shadow(0 1px rgba(0, 0, 0, 0.4))
+drop-shadow(0 -1px rgba(0, 0, 0, 0.4))
+drop-shadow(1px 1px rgba(0, 0, 0, 0.2))
+drop-shadow(-1px -1px rgba(0, 0, 0, 0.2))
+drop-shadow(1px -1px rgba(0, 0, 0, 0.2))
+drop-shadow(-1px 1px rgba(0, 0, 0, 0.2));
 }
 
 .img-car {
-    max-width: 50%;
-    max-height: 40vh;
-    margin: 0 auto;
+max-width: 50%;
+max-height: 40vh;
+margin: 0 auto;
 }
+
 .img-car:hover {
-    content: url('/imgs/Uncannyclose.webp'); /* Change the image on hover */
+content: url('/imgs/Uncannyclose.webp');
 }
 
 .img-chart {
-    width: 100%;
-    max-width: 1000px;   /* Smaller max width for better default size */
-    height: auto;
-    border-radius: 5px;
-    cursor: zoom-in;
-    transition: transform 0.4s ease, box-shadow 0.3s ease;
-    display: block;
-    margin: 0 auto;     /* Center the image inside its container */
+width: 100%;
+max-width: 1000px;
+height: auto;
+border-radius: 5px;
+cursor: zoom-in;
+transition: transform 0.4s ease, box-shadow 0.3s ease;
+display: block;
+margin: 0 auto;
 }
 
 .img-chart.zoomed {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    max-width: 95vw;
-    max-height: 95vh;
-    width: auto;
-    z-index: 9999;
-    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
-    border-radius: 12px;
-    cursor: zoom-out;
-    background-color: #212121;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(1);
+max-width: 95vw;
+max-height: 95vh;
+width: auto;
+z-index: 9999;
+box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+border-radius: 12px;
+cursor: zoom-out;
+background-color: #212121;
 }
 
+/* ############################## */
+/*         Content Layout        */
+/* ############################## */
 
-.text-box {
-    display: flex;
-    justify-content: space-between; /* Adjusts spacing automatically */
-    padding: 8px;
-    border-radius: 15px; /* Add rounded corners */
-    background-color: #333; /* Optional background for the container */
-    color: white;
-    max-width: 1000px;
-    align-items: justify;
-    margin-right: 15%;
-    margin-left: 15%;
+.main-content {
+padding: 30px;
+max-width: 1000px;
+margin: 0 auto;
 }
 
-.text-box-item {
-    flex-grow: 1; /* Allow the item to grow within the container */
-    flex-basis: 600px; /* Set a consistent base width */
-    max-width: 1000px; /* Optional: Limit the maximum size */
-    padding: 10px;
-    background-color: #3d3d3d;
-    color: #ECECEC;
-    text-align: justify;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 0 1%;
-    box-sizing: border-box;
+.text-box, .chart-box {
+display: flex;
+padding: 10px;
+border-radius: 15px;
+background-color: #333;
+color: white;
+max-width: 1000px;
+margin: 30px auto;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.text-box-item, .chart-box-inner {
+flex-grow: 1;
+flex-basis: 600px;
+padding: 10px;
+border-radius: 15px;
+background-color: #3d3d3d;
+text-align: justify;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+box-sizing: border-box;
 }
 
 .box-divider {
-    border: none;
-    height: 2px;
-    background-color: #aaa;
-    margin: 20px 0;
-    border-radius: 4px;
-    opacity: 0.4;
+border: none;
+height: 2px;
+background-color: #aaa;
+margin: 20px 0;
+border-radius: 4px;
+opacity: 0.4;
 }
 
-.chart-box {
+/* ############################## */
+/*         Social page            */
+/* ############################## */
+
+.social-card-grid {
+display: flex;
+flex-wrap: wrap;
+gap: 2rem;
+justify-content: center;
+margin: 5rem auto;
+max-width: 1000px;
+}
+
+.icon-circle {
+flex-shrink: 0;
+background-color: #6161619f;
+width: 65px;
+height: 65px;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.card {
+display: flex;
+flex-direction: column;
+background-color: #424242;
+border-radius: 15px;
+width: 400px;
+height: 10rem;
+padding: 1.5rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+background-color: #494949;
+box-shadow: 0 0 36px rgba(0, 0, 0, 0.5);
+}
+
+.card-top {
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.card-label-wrapper {
+flex-grow: 1;
+display: flex;
+justify-content: center;
+}
+
+.card-label {
+font-family: 'Segoe UI';
+font-weight: bold;
+font-size: 1.6rem;
+color: #ffffff;
+padding-right: 13%;
+text-align: center;
+}
+
+.card-bottom {
+margin-top: 1rem;
+}
+
+.card .discord-id {
+font-size: 1.3rem;
+text-align: center;
+line-height: 1.6;
+color: #ffffff;
+display: inline-block;
+transition: transform 0.3s, color 0.3s;
+}
+
+.card-label-discord {
+font-family: 'Segoe UI';
+font-weight: bold;
+font-size: 1.6rem;
+color: #ffffff;
+line-height: 1.5rem;
+text-align: center;
+display: inline;
+}
+
+.card-top .card-label-discord {
+width: 100%;
+text-align: center;
+}
+
+.card:hover .card-label {
+color: #da8fff;
+}
+
+.card:hover .discord-id {
+color: #da8fff;
+text-shadow: 5px 5px 5px rgba(5, 5, 5, 1);
+}
+
+.discord-id {
+font-size: 0.95rem;
+}
+
+.layout-social {
+  display: flex;
+  flex-direction: row;
+  min-height: 80vh;
+  }
+
+  .familyguy {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
     display: flex;
-    flex-grow: 1; /* Allow the item to grow within the container */
-    flex-basis: 600px; /* Set a consistent base width */
-    max-width: 1000px; /* Optional: Limit the maximum size */
-    justify-content: center;
-    align-items: center;
-    background-color: #333;
-    padding: 10px;
-    border-radius: 15px;
-    margin: 30px auto;
-    max-width: 1000px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-    margin-left: 15%;
-    margin-right: 15%;
+    flex-direction: column-reverse; /* Makes box expand upwards */
+    align-items: flex-end;
+    z-index: 999;
+  }
+  
+
+.familyguy-box {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding-left: 2%;
+  border-radius: 15px;
+  background-color: #333;
+  width: 330px;
+  height: 30px;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: height 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
 }
 
-.chart-box-inner {
-    padding: 5px;
-    border-radius: 10px;
+.familyguy-box.expanded {
+  height: 200px;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-.main-content {
-    padding: 30px;
-    max-width: 1000px;
-    margin: 0 auto;
+.familyguy-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  margin-top: 10px;
+  display: none;
 }
 
-
-/* Contacts page stuff */
-.contact-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-.contact-list li {
-    margin-bottom: 15px;
-    font-size: 1.1rem;
-}
-.contact-list a {
-    color: #00bcd4;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-.contact-list a:hover {
-    color: #da8fff;
-}
-
-@media (max-width: 800px) {
-    .layout {
-        flex-direction: column;
-    }
-
-    nav {
-        position: static;
-        top: auto;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        padding: 10px;
-        gap: 10px;
-    }
-
-    nav a {
-        flex-direction: column;
-        width: 40vw;
-        padding: 12px;
-        font-size: 0.9rem;
-    }
-
-    .main-content {
-        padding: 10px;
-        max-width: 100%;
-    }
-
-    .text-box,
-    .chart-box {
-        margin-left: 5%;
-        margin-right: 5%;
-        padding: 10px;
-    }
-
-    .img-chart {
-        max-width: 100%;
-        max-height: 100%;
-        height: auto;
-    }
+.familyguy-box.expanded iframe {
+  display: block;
 }
