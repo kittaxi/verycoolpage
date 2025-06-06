@@ -141,7 +141,7 @@ width: 45px;
 height: 45px;
 max-width: 45px;
 max-height: 45px;
-object-fit: cover;
+object-fit: contain;
 aspect-ratio: 1 / 1;
 filter: drop-shadow(1px 0 rgba(0, 0, 0, 0.4))
 drop-shadow(-1px 0 rgba(0, 0, 0, 0.4))
