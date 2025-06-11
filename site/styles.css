@@ -342,7 +342,7 @@ font-size: 0.95rem;
   min-height: 80vh;
   }
 
-@media (max-width: 768px) {
+  @media (max-width: 1200px) and (hover: none) and (pointer: coarse) {
   .layout,
   .layout-social {
     flex-direction: column;
