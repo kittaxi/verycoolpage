@@ -4,7 +4,7 @@
 
 body {
 font-family: 'Segoe UI', Roboto, sans-serif;
-background-color: #212121;
+background-color: #161616;
 color: #ECECEC;
 text-align: center;
 margin: 0;
@@ -17,7 +17,6 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 padding: 10px 20px;
-background-color: #333;
 color: white;
 }
 
@@ -33,9 +32,11 @@ top: 20px;
 align-self: flex-start;
 display: flex;
 flex-direction: column;
-gap: 20px;
-padding: 20px;
-background-color: #1e1e1e;
+gap: 15px;
+margin-top: 5%;
+padding: 15px;
+border-radius: 10px;
+background-color: #1C1B22;
 color: white;
 height: fit-content;
 }
@@ -46,7 +47,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 padding: 24px 16px;
-background-color: #424242;
+background-color: rgba(77, 77, 77, 0.4);
 color: white;
 text-decoration: none;
 font-size: 1rem;
@@ -60,8 +61,49 @@ box-sizing: border-box;
 }
 
 nav a:hover {
-background-color: #616161;
+background-color: rgb(63, 56, 82);
 transform: scale(1.1);
+box-shadow: 0 0 36px rgba(0, 0, 0, 0.7);
+}
+
+/* ############################## */
+/*         Content Layout        */
+/* ############################## */
+
+.main-content {
+padding: 30px;
+max-width: 1000px;
+margin: 0 auto;
+}
+
+.text-box, .chart-box {
+display: flex;
+padding: 10px;
+border-radius: 15px;
+background-color: #1C1B22;
+color: white;
+max-width: 900px;
+margin: 30px auto;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.text-box-item, .chart-box-inner {
+flex-grow: 1;
+flex-basis: 600px;
+padding: 10px;
+border-radius: 15px;
+background-color: rgba(77, 77, 77, 0.1);
+text-align: justify;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+}
+
+.box-divider {
+border: none;
+height: 3px;
+background-color: #aaa;
+border-radius: 999px;
+opacity: 0.4;
 }
 
 /* ############################## */
@@ -71,7 +113,7 @@ transform: scale(1.1);
 h1 {
 font-size: 2rem;
 padding: 10px 20px;
-color: #ECECEC;
+color: #E5E5F1;
 }
 
 h2, .subheading-abovebox, .subheading-inbox {
@@ -80,8 +122,8 @@ text-align: left;
 }
 
 h2 {
-font-size: 1.5rem;
-margin-left: 15%;
+  font-size: 1.5rem;
+  margin-left: 15%;
 }
 
 .subheading-abovebox {
@@ -91,18 +133,19 @@ margin-left: 15%;
 }
 
 .subheading-inbox {
-font-size: 1.3rem;
+font-size: 1.2rem;
 padding: 0 5px;
 font-weight: bold;
+line-height: 0.9rem;
 }
 
 .p1 {
-font-size: 1.2rem;
+font-size: 1.1rem;
 color: #ECECEC;
 text-align: left;
 margin-left: 1%;
 margin-right: 2%;
-line-height: 1.8rem;
+line-height: 1.7rem;
 font-weight: normal;
 }
 
@@ -190,47 +233,6 @@ background-color: #212121;
 }
 
 /* ############################## */
-/*         Content Layout        */
-/* ############################## */
-
-.main-content {
-padding: 30px;
-max-width: 1000px;
-margin: 0 auto;
-}
-
-.text-box, .chart-box {
-display: flex;
-padding: 10px;
-border-radius: 15px;
-background-color: #333;
-color: white;
-max-width: 1000px;
-margin: 30px auto;
-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-}
-
-.text-box-item, .chart-box-inner {
-flex-grow: 1;
-flex-basis: 600px;
-padding: 10px;
-border-radius: 15px;
-background-color: #3d3d3d;
-text-align: justify;
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-box-sizing: border-box;
-}
-
-.box-divider {
-border: none;
-height: 2px;
-background-color: #aaa;
-margin: 20px 0;
-border-radius: 4px;
-opacity: 0.4;
-}
-
-/* ############################## */
 /*         Social page            */
 /* ############################## */
 
@@ -257,7 +259,7 @@ justify-content: center;
 .card {
 display: flex;
 flex-direction: column;
-background-color: #424242;
+background-color: rgba(183, 135, 228, 0.123);
 border-radius: 15px;
 width: 400px;
 height: 10rem;
@@ -267,8 +269,9 @@ transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card:hover {
-background-color: #494949;
-box-shadow: 0 0 36px rgba(0, 0, 0, 0.5);
+background-color: rgb(63, 56, 82);
+box-shadow: 0 0 36px rgba(0, 0, 0, 0.7);
+transform: scale(1.1);
 }
 
 .card-top {
@@ -338,3 +341,88 @@ font-size: 0.95rem;
   flex-direction: row;
   min-height: 80vh;
   }
+
+@media (max-width: 768px) {
+  .layout,
+  .layout-social {
+    flex-direction: column;
+  }
+
+  nav {
+    position: static;
+    width: 90%;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10px;
+    margin-left: 3%;
+  }
+
+  .main-content,
+  .social-card-grid {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .card {
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  .text-box,
+  .chart-box {
+    flex-direction: column;
+    margin: 20px 10px;
+  }
+
+  .text-box-item,
+  .chart-box-inner {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    width: 25rem;
+    height: 10rem;
+    padding: 1.5rem;
+    }
+  
+  .p1 {
+    font-size: 1.1rem;
+    color: #ECECEC;
+    text-align: left;
+    margin-left: 1%;
+    margin-right: 2%;
+    line-height: 1.8rem;
+    font-weight: normal;
+    }
+
+  h1 {
+    font-size: 2rem;
+    padding: 10px 20px;
+    color: #ECECEC;
+    }
+
+  .h1-contact {
+    font-size: 2rem;
+    padding: 10px 20px;
+    color: #ECECEC;
+    line-height: 0px;
+    margin-top: 10%;
+    margin-bottom: -5%;
+    }
+    
+    h2, .subheading-abovebox, .subheading-inbox {
+    font-size: 1.2rem;
+    color: #ECECEC;
+    text-align: left;
+    }
+    
+    h2 {
+      font-size: 1.5rem;
+      margin-left: 15%;
+    }
+}
