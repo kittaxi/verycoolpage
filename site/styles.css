@@ -342,7 +342,7 @@ font-size: 0.95rem;
   min-height: 80vh;
   }
 
-  @media (max-width: 1200px) and (hover: none) and (pointer: coarse) {
+  @media (max-width: 768px), (max-width: 1200px) and (hover: none) and (pointer: coarse) {
   .layout,
   .layout-social {
     flex-direction: column;
@@ -385,7 +385,7 @@ font-size: 0.95rem;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    width: 25rem;
+    width: 20rem;
     height: 10rem;
     padding: 1.5rem;
     }
